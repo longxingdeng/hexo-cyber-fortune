@@ -9,8 +9,8 @@ class QuantumBackground {
     }
 
     init() {
-        this.canvas.width = window.innerWidth;
-        this.canvas.height = window.innerHeight;
+        // this.canvas.width = window.innerWidth;
+        // this.canvas.height = window.innerHeight;
 
         // 生成纠缠粒子对
         for(let i = 0; i < 100; i++) {
