@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap">
+  
+<link rel="stylesheet" href="/hexo-cyber-fortune/css/style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/iztro@2.0.5/dist/iztro.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+  <canvas class="quantum-bg"></canvas>
+
+<div class="cyber-container">
+    <h1 class="cyber-title">
+        <span class="glitch-text">𓊖 赛博知命</span>
+    </h1>
+
+    <div class="quantum-form">
+        <div class="nebula-divider" data-text="𓎜 量子纠缠锚点"></div>
+
+        <div class="cyber-field">
+            <label class="neon-label">
+                <span class="hologram-text">姓氏(建議使用繁體字)</span>
+                <span class="optional-tag">（选填）</span>
+            </label>
+            <input type="text" class="cyber-input"
+                 placeholder="请输入姓氏">
+        </div>
+
+        <div class="cyber-field">
+            <label class="neon-label">
+                <span class="hologram-text">名字(建議使用繁體字)</span>
+                <span class="optional-tag">（选填）</span>
+            </label>
+            <input type="text" class="cyber-input"
+                 placeholder="请输入名字">
+        </div>
+
+        <div class="cyber-field">
+            <label class="neon-label">性别:</label>
+            <div class="gender-selector">
+                <div class="quantum-polarity" data-polarity="♂">
+                    <input type="radio" name="gender" id="male"
+                         class="quantum-radio" value="乾造" hidden>
+                    <label for="male" class="polarity-label">
+                        <span class="sigil">𓁛</span>
+                        <span class="polarity-text">男</span >
+                    </label>
+                </div>
+                <div class="quantum-polarity" data-polarity="♀">
+                    <input type="radio" name="gender" id="female"
+                         class="quantum-radio" value="坤造" hidden>
+                    <label for="female" class="polarity-label">
+                        <span class="sigil">𓁟</span>
+                        <span class="polarity-text">女</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="cyber-field">
+            <label class="neon-label">
+                <span class="hologram-text">阳历出生年月日时分 | 请用+8时区:</span>
+            </label>
+            <div class="temporal-input">
+                <input type="date" class="cyber-input" id="birthDate">
+                <select class="cyber-input" id="birthHour">
+                    <option value="">-- 时 --</option>
+                    <option value="00">00</option> <option value="01">01</option> <option value="02">02</option> <option value="03">03</option> <option value="04">04</option> <option value="05">05</option> <option value="06">06</option> <option value="07">07</option> <option value="08">08</option> <option value="09">09</option> <option value="10">10</option> <option value="11">11</option> <option value="12">12</option> <option value="13">13</option> <option value="14">14</option> <option value="15">15</option> <option value="16">16</option> <option value="17">17</option> <option value="18">18</option> <option value="19">19</option> <option value="20">20</option> <option value="21">21</option> <option value="22">22</option> <option value="23">23</option>
+                </select>
+                <select class="cyber-input" id="birthMinute">
+                    <option value="">-- 分 --</option>
+                    <option value="00">00</option> <option value="01">01</option> <option value="02">02</option> <option value="03">03</option> <option value="04">04</option> <option value="05">05</option> <option value="06">06</option> <option value="07">07</option> <option value="08">08</option> <option value="09">09</option> <option value="10">10</option> <option value="11">11</option> <option value="12">12</option> <option value="13">13</option> <option value="14">14</option> <option value="15">15</option> <option value="16">16</option> <option value="17">17</option> <option value="18">18</option> <option value="19">19</option> <option value="20">20</option> <option value="21">21</option> <option value="22">22</option> <option value="23">23</option> <option value="24">24</option> <option value="25">25</option> <option value="26">26</option> <option value="27">27</option> <option value="28">28</option> <option value="29">29</option> <option value="30">30</option> <option value="31">31</option> <option value="32">32</option> <option value="33">33</option> <option value="34">34</option> <option value="35">35</option> <option value="36">36</option> <option value="37">37</option> <option value="38">38</option> <option value="39">39</option> <option value="40">40</option> <option value="41">41</option> <option value="42">42</option> <option value="43">43</option> <option value="44">44</option> <option value="45">45</option> <option value="46">46</option> <option value="47">47</option> <option value="48">48</option> <option value="49">49</option> <option value="50">50</option> <option value="51">51</option> <option value="52">52</option> <option value="53">53</option> <option value="54">54</option> <option value="55">55</option> <option value="56">56</option> <option value="57">57</option> <option value="58">58</option> <option value="59">59</option>
+                </select>
+                <div class="timeshock-indicator"></div>
+            </div>
+        </div>
+
+        <div class="cyber-field">
+            <label class="neon-label">出生省份/直辖市:</label>
+            <select class="cyber-input" id="birthProvince">
+                <option value="">- 请选择省份 -</option>
+                <!-- Add more countries as needed -->
+            </select>
+        </div>
+
+        <div class="cyber-field">
+            <label class="neon-label">出生城市:</label>
+            <select class="cyber-input" id="birthCity">
+                <option value="">- 请选择城市 -</option>
+                <!-- Add more cities as needed, potentially based on country selection -->
+            </select>
+        </div>
+
+        <div class="cyber-field">
+            <label class="neon-label">
+                <span class="hologram-text">自定义经度 (选填)</span>
+            </label>
+            <input type="text" class="cyber-input" placeholder="例如: 121.5">
+            <p style="font-size: 0.8em; margin-top: 0.3rem;">若填写此栏位将优先使用自定义经度 (有效范围: -180 到 180，东经为正值)</p>
+        </div>
+
+        <div class="cyber-field">
+            <label class="neon-label">模型选择 (Model):</label>
+            <select class="cyber-input" id="llmModel">
+                <option value="deepseek-r1">deepseek-r1 (高性能模型)</option>
+                <option value="deepseek-v3">deepseek-v3 (经济型模型)</option>
+                <!-- Add more model options as needed -->
+            </select>
+        </div>
+
+        <div class="cyber-checkbox-field">
+            <input type="checkbox" class="cyber-checkbox" id="useSolarTime" checked>
+            <label for="useSolarTime" class="cyber-checkbox-label">使用真太阳时:</label>
+        </div>
+
+        <div class="cyber-checkbox-field">
+            <input type="checkbox" class="cyber-checkbox" id="addZiWeiDouShu" checked>
+            <label for="addZiWeiDouShu" class="cyber-checkbox-label">加入紫微斗数:</label>
+        </div>
+
+        <div class="nebula-divider" data-text="🔑 API 配置 (LLM)"></div>
+        <div class="cyber-field">
+            <label class="neon-label">
+                <span class="hologram-text">API 地址</span>
+            </label>
+            <input type="text" class="cyber-input" id="llmApiUrl" placeholder="例如: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions" value="https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions">
+        </div>
+        <div class="cyber-field">
+            <label class="neon-label">
+                <span class="hologram-text">API 密钥</span>
+            </label>
+            <input type="password" class="cyber-input" id="llmApiKey" placeholder="请输入您的 API 密钥">
+        </div>
+        
+        <!-- 新增处理状态显示 -->
+        <div class="processing-box" id="processing-box">
+            <div class="neon-label">𓂀 量子演算进度</div>
+            <div class="processing-steps" id="processing-steps"></div>
+            <div id="processing-message">初始化量子场域...</div>
+        </div>
+
+        <button id="generate-btn" class="cyber-submit-button">𓃠 启动量子演算</button>
+        <div id="error-message"></div>
+        <div id="api-error-message"></div>
+        
+        <h2 class="neon-label">𓁟 演算结果:</h2>
+        <div style="position: relative;">
+            <pre id="llm-output"></pre>
+            <button id="copy-result-btn" class="copy-btn" style="display: none;">复制结果</button>
+        </div>
+
+        <div class="nebula-divider" data-text="重要声明"></div>
+        <div style="color: var(--neon-blue); font-size: 0.9em; text-align: center; margin-bottom: 1rem;">
+            命理学是一种复杂的学问仅供参考，不能作为决策的唯一依据。
+        </div>
+    </div>
+</div>
+
+<!-- 保留原有星图和结果区域 -->
+<div class="destiny-canvas" id="starMap"></div>
+<div id="quantumResult"></div>
+  
+<script src="/hexo-cyber-fortune/js/main.js"></script>
+
+</body>
+</html>
