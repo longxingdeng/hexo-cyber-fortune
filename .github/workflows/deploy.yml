@@ -20,11 +20,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Add execute permission to hexo
-        run: chmod +x ./node_modules/.bin/hexo
-
       - name: Build
-        run: npx hexo generate
+        run: npm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
