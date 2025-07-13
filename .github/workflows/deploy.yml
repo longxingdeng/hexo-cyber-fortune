@@ -21,7 +21,7 @@ jobs:
         run: npm install
 
       - name: Build
-        run: npm run build
+        run: node node_modules/hexo/bin/hexo generate
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
