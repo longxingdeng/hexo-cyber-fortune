@@ -1,0 +1,556 @@
+:root {
+    --cyber-gradient: linear-gradient(135deg, #00F3FF 0%, #2A0F37 50%, #FF00FF 100%);
+    --cyber-purple: #2A0F37;
+    --neon-pink: #FF00FF;
+    --star-trail: #00F3FF;
+    --matrix-green: #00FF00;
+}
+
+body {
+    background: var(--cyber-purple);
+    color: var(--star-trail);
+    font-family: 'Orbitron', 'Noto Sans TC', sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    margin: 20px;
+    padding: 0;
+}
+
+.cyber-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 2px solid var(--star-trail);
+    box-shadow: 0 0 30px var(--neon-pink);
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+}
+
+.cyber-input,
+.cyber-submit-button {
+    width: 100%; /* 确保在移动设备上占满宽度 */
+    box-sizing: border-box; /* 包含内边距和边框 */
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 10px; /* 减少边距 */
+    }
+
+    .cyber-container {
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+
+    .cyber-title {
+        font-size: 2.5rem; /* 缩小标题字体 */
+    }
+
+    .glitch-text {
+        font-size: 2rem; /* 缩小故障文本 */
+    }
+
+    .cyber-input {
+        font-size: 14px; /* 调整输入框字体大小 */
+    }
+
+    .cyber-submit-button {
+        font-size: 1em; /* 调整按钮字体大小 */
+        padding: 0.8rem 1.5rem; /* 调整按钮内边距 */
+    }
+
+    .progress-container {
+        height: 15px; /* 调整进度条高度 */
+    }
+
+    .progress-text {
+        font-size: 0.8em; /* 调整进度文本大小 */
+    }
+
+    .neon-label {
+        font-size: 1em; /* 调整标签字体大小 */
+    }
+
+    .gender-selector {
+        flex-direction: column; /* 垂直排列性别选择 */
+    }
+
+    .temporal-input {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .temporal-input .cyber-input {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+
+/* 新增处理状态样式 */
+.processing-box {
+    border: 2px solid var(--star-trail);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.processing-steps {
+    color: var(--matrix-green);
+    font-size: 0.9em;
+    margin: 1rem 0;
+}
+#processing-message {
+    color: var(--star-trail);
+    text-align: center;
+    font-size: 1.1em;
+}
+
+
+/* 量子场域分隔符 */
+.nebula-divider {
+    position: relative;
+    margin: 2rem 0;
+    border-top: 1px solid var(--neon-pink);
+}
+.nebula-divider::before {
+    content: attr(data-text);
+    position: absolute;
+    top: -0.8em;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 1rem;
+    background: var(--cyber-purple);
+    font-size: 0.9em;
+    text-shadow: 0 0 10px var(--matrix-green);
+}
+
+.cyber-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 2px solid var(--star-trail);
+    box-shadow: 0 0 30px var(--neon-pink);
+    background: rgba(0, 0, 0, 0.8); /* 恢复黑色背景 */
+    border-radius: 8px; /* 保留圆角 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 保留阴影 */
+}
+
+.cyber-title {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    position: relative;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: linear-gradient(45deg,
+        rgba(0, 243, 255, 0.1) 0%,
+        rgba(42, 15, 55, 0.3) 50%,
+        rgba(255, 0, 255, 0.1) 100%);
+    border: 2px solid var(--star-trail);
+    box-shadow: 0 0 30px var(--neon-pink);
+    color: #333;
+}
+
+.neon-subtitle {
+    color: var(--star-trail);
+    text-shadow: 0 0 5px var(--matrix-green);
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: -1rem;
+}
+
+.glitch-text {
+    display: block;
+    font-size: 3.5rem;
+    color: var(--star-trail);
+    text-shadow:
+        2px 0 var(--neon-pink),
+        -2px 0 var(--matrix-green),
+        0 0 20px rgba(255,0,255,0.5);
+    animation: glitch 2s infinite;
+}
+
+/* 赛博玄学输入域 */
+.cyber-field {
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+.neon-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.1em;
+    color: var(--star-trail); /*  改回原来的蓝色  */
+    text-shadow: 0 0 2px var(--matrix-green); /*  将模糊半径从 5px 减小到 2px  */
+    font-weight: bold;
+    /* color: #555;  这行可以删除 */
+}
+
+.hologram-text::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--cyber-gradient);
+    opacity: 0.7;
+}
+.optional-tag {
+    font-size: 0.8em;
+    color: var(--star-trail);
+    margin-left: 0.5em;
+}
+
+/* 极性振荡选择器 */
+.gender-selector {
+    display: flex;
+    gap: 2rem;
+    margin: 1.5rem 0;
+}
+.quantum-polarity {
+    position: relative;
+    flex: 1;
+    transition: transform 0.3s;
+}
+.quantum-polarity:hover {
+    transform: translateY(-3px);
+}
+.polarity-label {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid var(--star-trail);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.quantum-radio:checked + .polarity-label {
+    background: rgba(0, 243, 255, 0.1);
+    box-shadow: 0 0 15px var(--star-trail);
+}
+.sigil {
+    font-size: 1.5em;
+    margin-right: 0.8rem;
+}
+
+/* 时间扰动特效 */
+.temporal-input {
+    position: relative;
+    display: flex; /* Make temporal input container a flex container */
+    align-items: center; /* Align items vertically in the center */
+}
+.temporal-input select, .temporal-input input[type="date"] {
+    margin-right: 5px; /* Add some spacing between date/time selectors */
+    width: auto; /* Adjust width as needed */
+    flex: 1; /* Allow selectors to take available space */
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--star-trail);
+    color: var(--star-trail);
+    border-radius: 5px;
+    appearance: none; /* Remove default dropdown arrow in some browsers */
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none; /* For Firefox */
+    -moz-appearance: none; /* For Firefox */
+    font-size: 16px;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 8px);
+    background-position-y: center;
+}
+.timeshock-indicator {
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--matrix-green);
+    box-shadow: 0 0 10px var(--matrix-green);
+    animation: temporal-pulse 1.5s infinite;
+}
+
+.cyber-input {
+    width: 100%;
+    padding: 0.7rem;
+    margin: 0.3rem 0;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--star-trail);
+    color: var(--star-trail);
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+/* Checkbox styles */
+.cyber-checkbox-field {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+}
+.cyber-checkbox {
+    appearance: none; /* Remove default checkbox appearance */
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none; /* For Firefox */
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--star-trail);
+    background-color: transparent;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+}
+.cyber-checkbox:checked {
+    background-color: var(--star-trail);
+    border-color: var(--star-trail);
+}
+.cyber-checkbox:checked::after {
+    content: '\2714'; /* Checkmark character */
+    font-size: 16px;
+    color: var(--cyber-purple);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.cyber-checkbox-label {
+    margin-left: 0.5rem;
+    color: var(--star-trail);
+    font-size: 0.9em;
+}
+
+/* Submit button */
+ .cyber-submit-button {
+    padding: 1rem 2rem;
+    background:linear-gradient(135deg, #000080 0%, #00FFFF 100%); /* 深蓝到亮青 */
+    color: white; /* 修改文字颜色为白色 */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: transform 0.3s;
+    display: block;
+    margin: 2rem auto;
+    box-shadow: 0 0 15px var(--neon-pink);
+}
+
+.cyber-submit-button:hover {
+    transform: scale(1.05);
+}
+
+#generate-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 1rem;
+    background:linear-gradient(135deg, #000080 0%, #00FFFF 100%);
+    box-shadow: 0 0 15px var(--neon-pink);
+}
+
+#generate-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#error-message {
+    color: red;
+    margin-top: 10px;
+    display: none;
+}
+
+#api-error-message {
+    color: red;
+    margin-top: 10px;
+    display: none;
+}
+
+pre {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--star-trail);
+    border: 1px solid var(--star-trail);
+    box-shadow: 0 0 15px var(--neon-pink);
+    margin-top: 1rem;
+}
+
+.form-section {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--neon-pink);
+    margin-bottom: 1.5rem;
+}
+
+.form-section:last-child {
+    border-bottom: none;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background:linear-gradient(135deg, #000080 0%, #00FFFF 100%);
+    box-shadow: 0 0 10px var(--neon-pink);
+}
+
+.copy-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#llm-output {
+    white-space: pre-wrap; /* 保留换行和空格 */
+}
+
+#processing-message {
+    color: var(--star-trail);
+    text-align: center;
+    margin-top: 1rem;
+    display: none; /* Initially hidden */
+}
+
+@keyframes glitch {
+    0% { transform: translate(2px, 0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(0, -1px); }
+    60% { transform: translate(1px, 1px); }
+    80% { transform: translate(-1px, -1px); }
+    100% { transform: translate(0, 0); }
+}
+@keyframes temporal-pulse {
+    0% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0.3; transform: scale(1); }
+}
+
+/* 保留原有量子背景和滚动条样式 */
+.quantum-bg { position: fixed; z-index: -1; }
+::-webkit-scrollbar { width: 10px; background: rgba(0, 243, 255, 0.1); }
+::-webkit-scrollbar-thumb { background: var(--cyber-gradient); }
+
+/* Dropdown arrow styling for consistency across browsers */
+select.cyber-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 8px);
+    background-position-y: center;
+}
+
+.date-group {
+    display: flex;
+    gap: 10px;
+}
+
+.date-group input {
+    width: 33%;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-group label {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    margin: 0;
+}
+
+/* Markdown Output Styling */
+.llm-output-container {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(22, 9, 33, 0.8);
+    border: 1px solid #5a2a8a;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(128, 0, 255, 0.5);
+    color: #e0e0e0;
+    min-height: 100px;
+    white-space: normal; /* Changed from pre-wrap */
+    word-wrap: break-word;
+    font-family: 'Noto Sans TC', sans-serif;
+    position: relative;
+}
+
+.llm-output-container h1,
+.llm-output-container h2,
+.llm-output-container h3 {
+    color: #c8a2c8; /* Light purple for headers */
+    border-bottom: 1px solid #5a2a8a;
+    padding-bottom: 5px;
+    margin-top: 1.5em;
+    margin-bottom: 0.8em;
+    font-weight: bold; /* Make headers bold */
+}
+
+.llm-output-container h2 {
+    font-size: 1.4em; /* Enlarge h2 */
+}
+
+.llm-output-container h3 {
+    font-size: 1.2em; /* Enlarge h3 */
+}
+
+.llm-output-container p {
+    line-height: 1.6; /* Reduce line height */
+    margin-bottom: 0.8em; /* Reduce paragraph spacing */
+}
+
+.llm-output-container ul,
+.llm-output-container ol {
+    padding-left: 25px;
+    margin-bottom: 1em;
+}
+
+.llm-output-container li {
+    margin-bottom: 0.5em;
+}
+
+.llm-output-container strong,
+.llm-output-container b {
+    color: #f0e68c; /* Khaki for emphasis */
+}
+
+.llm-output-container code {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-family: 'Orbitron', monospace;
+}
+
+.llm-output-container blockquote {
+    border-left: 4px solid #5a2a8a;
+    padding-left: 15px;
+    margin-left: 0;
+    color: #b0a8b9;
+    font-style: italic;
+}

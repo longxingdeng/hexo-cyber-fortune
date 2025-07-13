@@ -1,0 +1,11 @@
+<header id="header" class="cyber-title">
+  <div class="glitch-text" data-text="<%= config.title %>"><%= config.title %></div>
+  <% if (config.subtitle){ %>
+    <p class="neon-subtitle"><%= config.subtitle %></p>
+  <% } %>
+  <nav id="main-nav">
+    <% for (var i in theme.nav){ %>
+      <a class="main-nav-link" href="<%- url_for(theme.nav[i]) %>"><%= i %></a>
+    <% } %>
+  </nav>
+</header>

@@ -1,0 +1,94 @@
+# ---------------------------------------------------------------
+# ## Hexo-Theme-Landscape
+# ## Github: https://github.com/hexojs/hexo-theme-landscape
+# ---------------------------------------------------------------
+
+# >> Global
+# ---------------------------------------------------------------
+# favicon
+favicon: /favicon.png
+
+# logo
+logo:
+
+# rss
+rss: /atom.xml
+
+# open graph
+open_graph:
+  fb_admins:
+  fb_app_id:
+  # twitter_id:
+  # google_plus:
+  # fb_admins:
+  # fb_app_id:
+
+# >> Style
+# ---------------------------------------------------------------
+# Nav
+nav:
+  Home: /
+  About: /about
+  Cyber-Fortune: /cyber-fortune
+# Banner
+banner: /css/images/banner.jpg
+
+# >> JS
+# ---------------------------------------------------------------
+# CDN
+# You can choose any of the following CDN providers.
+#   - auto:    auto detect which is the fastest
+#   - google:  https://ajax.googleapis.com/ajax/libs
+#   - upyun:   http://ajax.upyun.com
+#   - sina:    http://lib.sinaapp.com
+#   - baidu:   http://libs.baidu.com
+#   - qiniu:   http://cdn.staticfile.org
+#
+# Or you can configure your own CDN, for example:
+#   jquery:    //cdn.your-cdn.com/path/to/jquery.min.js
+#   fancybox:  //cdn.your-cdn.com/path/to/jquery.fancybox.min.js
+#
+cdn:
+  # provider: auto
+  # jquery:
+  # fancybox:
+  # fancybox_css:
+
+# >> Widgets
+# ---------------------------------------------------------------
+widgets:
+- category
+- tag
+- tagcloud
+- archive
+- recent_posts
+
+# >> Miscellaneous
+# ---------------------------------------------------------------
+# Miscellaneous
+google_analytics:
+gauges_analytics:
+baidu_analytics:
+tencent_analytics:
+busuanzi_analytics: false
+
+# Facebook SDK
+facebook_sdk:
+  enable: false
+  app_id:
+  like_button: true
+  webmaster:
+
+# Share
+# AddThis Share Buttons
+# http://www.addthis.com/
+addthis:
+  enable: false
+  pubid:
+  facebook: true
+  twitter: true
+  google: true
+  pinterest: true
+
+# Show date of last update in each post
+show_last_update: false
