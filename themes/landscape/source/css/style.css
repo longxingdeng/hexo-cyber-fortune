@@ -77,7 +77,7 @@ body {
     }
 
     .temporal-input {
-        flex-direction: column;
+        /* flex-direction: column; */ /* Keep it horizontal on mobile */
         gap: 10px;
     }
 
