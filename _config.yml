@@ -61,7 +61,7 @@ prismjs:
 # path: Root path for your blogs index page. (default = '')
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: 'blog'
   per_page: 10
   order_by: -date
 
